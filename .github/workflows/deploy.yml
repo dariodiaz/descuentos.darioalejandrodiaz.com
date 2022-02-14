@@ -1,0 +1,15 @@
+name: Deploy app
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to descuentos.darioalejandrodiaz.com
+        uses: appleboy/ssh-action@master
+        with:
+          username: ${{ secrets.SSH_USERNAME }}
+          host: ${{ secrets.SSH_HOST }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: 'cd /var/www/descuentos.darioalejandrodiaz.com/ && git pull'
