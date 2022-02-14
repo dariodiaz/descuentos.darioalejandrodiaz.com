@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Porcentajes y descuentos</title>
 </head>
 <body>
-    <header>
-        <h1>
-            Porcentajes y descuentos
-        </h1>
-        <p>Simple utilidad para calcular descuentos</p>
-    </header>
-    <section>
-        <h2>
+    <section class="center">
+        <h3>
             Calcula el precio a pagar con descuento
-        </h2>
+        </h3>
         <form action="#">
-            <label for="precio">Ingresa el Precio sin descuento</label>
-            <input type="number" id="precio">
-            <label for="porcentaje-descuento">Ingresa el porcentaje de descuento</label>
-            <input type="number" id="porcentaje-descuento">
-            <button type="submit" onclick="onClickBotonParaCalcularDescuento()">Calcular</button>
-            <p id="resultado"></p>
+                <div class="inputbox">
+                    <input type="number" id="precio">
+                    <span>Ingresa el precio sin descuento</span>
+                </div>
+                <div class="inputbox">
+                    <input type="number" id="porcentaje-descuento">
+                    <span>Ingresa el porcentaje de descuento</span>
+                </div>                    
+                <div class="inputbox">
+                    <input type="button" value="Calcular" onclick="onClickBotonParaCalcularDescuento()"></input>
+                </div>
+                <p id="resultado"></p>
         </form>
     </section>
     
