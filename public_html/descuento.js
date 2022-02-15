@@ -12,7 +12,7 @@ function onClickBotonParaCalcularDescuento() {
 	debugger;
 	if (isValidData(inputPrecio.value, inputPorcentajeDeDescuento.value)) {
 		resultado.innerHTML = "<p style='color: red;'>"+
-		"Por favor ingresa todos los datos</p>"
+		"Por favor revisa los datos ingresados</p>"
 		return;
 	}
 	const precioConDescuento = calcularPrecioConDescuento(inputPrecio.value, inputPorcentajeDeDescuento.value);
