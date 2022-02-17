@@ -10,7 +10,7 @@ function onClickBotonParaCalcularDescuento() {
 	const inputPorcentajeDeDescuento = document.getElementById('porcentaje-descuento');
 	const resultado = document.getElementById('resultado');
 	debugger;
-	if (isValidData(inputPrecio.value, inputPorcentajeDeDescuento.value)) {
+	if (isValidInputData(inputPrecio.value, inputPorcentajeDeDescuento.value)) {
 		resultado.innerHTML = "<p style='color: red;'>"+
 		"Por favor revisa los datos ingresados</p>"
 		return;
@@ -19,6 +19,6 @@ function onClickBotonParaCalcularDescuento() {
 	resultado.innerText = "El precio con descuento es: " + precioConDescuento;
 }
 
-function isValidData(precio, porcentaje) {
+function isValidInputData(precio, porcentaje) {
 	return (!precio || !porcentaje) || (precio < 0 || porcentaje < 0);
 }
